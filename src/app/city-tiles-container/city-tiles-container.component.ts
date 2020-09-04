@@ -16,6 +16,10 @@ export class CityTilesContainerComponent implements OnInit {
     {
       city: 'Prague',
       imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/80/Charles_Bridge_-_Prague%2C_Czech_Republic_-_panoramio.jpg',
+    },
+    {
+      city: 'new city',
+      imageUrl: 'assets/img/add.png'
     }
   ];
 
