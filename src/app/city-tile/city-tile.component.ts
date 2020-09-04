@@ -27,3 +27,4 @@ export class CityTileComponent implements OnInit {
   }
 
 }
+

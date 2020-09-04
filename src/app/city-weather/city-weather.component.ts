@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-city-weather',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CityWeatherComponent implements OnInit {
 
-  constructor() { }
+  city: string;
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe((params) => {
+      this.city = params.city;
+    });
   }
 
 }
