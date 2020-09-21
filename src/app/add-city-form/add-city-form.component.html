@@ -1,1 +1,15 @@
-<p>add-city-form works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>City name
+    <input class="form-control" type="text" formControlName="name">
+    </label>
+  </div>
+  <div class="form-group">
+    <label>Image URl
+    <input class="form-control" type="url" formControlName="imageUrl">
+    </label>
+  </div>
+  <button type="submit" class="btn btn-primary">Add new city</button>
+</form>
+
+<div>{{form.value | json}}</div>

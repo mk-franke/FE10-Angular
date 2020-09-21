@@ -14,7 +14,7 @@ const routes: Routes = [
     component: CityWeatherComponent
   },
   {
-    path: 'new-name',
+    path: 'new-city',
     component: AddCityFormComponent
   }
 ];
