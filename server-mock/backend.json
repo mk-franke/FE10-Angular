@@ -1,10 +1,12 @@
 {
   "cities": [
     {
+      "id": 1,
       "name": "Berlin",
       "imageUrl": "assets/img/berlin.jpg"
     },
     {
+      "id": 2,
       "name": "Prague",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/80/Charles_Bridge_-_Prague%2C_Czech_Republic_-_panoramio.jpg"
     },

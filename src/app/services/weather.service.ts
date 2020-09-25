@@ -7,11 +7,12 @@ import {HttpClient} from '@angular/common/http';
 })
 export class WeatherService {
 
-  private API_KEY = '';
+  private API_KEY = '439fd5ad981259933be5ce96454619ae';
 
   constructor(private httpClient: HttpClient) { }
 
   getWeather(cityName: string): Observable<any> {
     return this.httpClient.get(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${(this.API_KEY)}`);
   }
+
 }
