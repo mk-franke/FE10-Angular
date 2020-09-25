@@ -1,10 +1,10 @@
-<div class="city-tile card">
+<div class="city-tile card" (contextmenu)="onRightClick($event)">
   <a [routerLink]="[path]">
-  <div class="city-name card-title">{{city}}</div>
+  <div class="city-name card-title">{{city.name}}</div>
 
   <div class="card-body">
     <div class="temp">{{temperature}}<span>&#8451;</span></div>
-    <img class="card-img" src="{{imageUrl}}" alt="city-picture">
+    <img class="card-img" src="{{city.imageUrl}}" alt="city-picture">
   </div>
   </a>
 </div>

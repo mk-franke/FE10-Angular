@@ -1,8 +1,8 @@
 <div class="row">
   <app-city-tile *ngFor="let city of cities"
-                 [city]="city.name"
-                 [imageUrl]="city.imageUrl"
+                 [city]="city.city"
                  [temperature]="city.temp"
+                 (rightClick)="removeCity($event)"
   >
   </app-city-tile>
   <app-add-city-tile></app-add-city-tile>

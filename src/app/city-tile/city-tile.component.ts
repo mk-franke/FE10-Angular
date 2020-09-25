@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
+import {CityDto} from '../dto/CityDto';
 
 @Component({
   selector: 'app-city-tile',
@@ -8,16 +9,16 @@ import {Component, Input, OnInit} from '@angular/core';
 export class CityTileComponent implements OnInit {
 
   @Input()
-  city: string;
+  city: CityDto;
 
   @Input()
-  imageUrl: string;
-
-  @Input()
-  path: string;
+  path;
 
   @Input()
   temperature = 0;
+
+  @Output()
+  rightClick = new EventEmitter<string>();
 
   constructor() {
   }
@@ -28,6 +29,11 @@ export class CityTileComponent implements OnInit {
 
   setPathIfNotEmpty(): void {
     this.path = this.path ? this.path : 'name/' + this.city;
+  }
+
+  onRightClick(event): void {
+    event.preventDefault();
+    this.rightClick.emit(this.city.id);
   }
 
 }

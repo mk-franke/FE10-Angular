@@ -3,7 +3,6 @@ import {CityModel} from '../model/CityModel';
 import {CityService} from '../services/city.service';
 import {ActivatedRoute} from '@angular/router';
 import {WeatherService} from '../services/weather.service';
-import {flatMap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-city-tiles-container',
@@ -24,12 +23,16 @@ export class CityTilesContainerComponent implements OnInit {
         cities.forEach(city => this.weatherService.getWeather(city.name)
           .subscribe(data => this.cities.push(
             {
-              name: city.name,
-              imageUrl: city.imageUrl,
+              city,
               temp: data.main.temp
             }
           ))
         );
       });
   }
+
+  removeCity(id: string): void {
+    console.log(`This city with ${id} will be removed`);
+  }
+
 }

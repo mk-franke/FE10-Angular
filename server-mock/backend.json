@@ -14,6 +14,11 @@
       "id": 3,
       "name": "Paris",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/450px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg"
+    },
+    {
+      "id": 4,
+      "name": "San Francisco",
+      "imageUrl": "https://d12dkjq56sjcos.cloudfront.net/pub/media/wysiwyg/sanfrancisco/01-city-landing/San-Francisco-Skyline-Golden-Gate-Bridge-Big-Bus-Tours-Jan-2016.jpg"
     }
   ]
 }

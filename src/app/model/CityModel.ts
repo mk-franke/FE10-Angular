@@ -1,5 +1,6 @@
+import {CityDto} from '../dto/CityDto';
+
 export interface CityModel {
-  name: string;
-  imageUrl: string;
+  city: CityDto;
   temp: number;
 }
