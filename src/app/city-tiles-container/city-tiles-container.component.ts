@@ -19,20 +19,24 @@ export class CityTilesContainerComponent implements OnInit {
   }
 
   ngOnInit(): void {
-      this.cityService.getCities().subscribe(cities => {
-        cities.forEach(city => this.weatherService.getWeather(city.name)
+    this.cities = [];
+    this.cityService.getCities().subscribe(cities => {
+      cities.forEach(city => this.weatherService.getWeather(city.name)
           .subscribe(data => this.cities.push(
             {
               city,
               temp: data.main.temp
             }
           ))
-        );
-      });
+      );
+    });
   }
 
   removeCity(id: string): void {
     console.log(`This city with ${id} will be removed`);
+    this.cityService.removeCity(id).subscribe((city) =>
+      this.ngOnInit()
+    );
   }
 
 }

@@ -21,4 +21,8 @@ export class CityService {
     return this.httpClient.post<CityDto>(this.cityUrl, cityDto);
   }
 
+  removeCity(id: string): Observable<CityDto> {
+    return this.httpClient.delete<CityDto>(`${this.cityUrl}/${id}`);
+  }
+
 }
